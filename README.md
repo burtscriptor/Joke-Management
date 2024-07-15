@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Joke Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Access to [Joke Management](https://joke-management-84fa45efb63e.herokuapp.com/)
 
-## Available Scripts
+<img width="1280" alt="Joke mgmt" src="https://github.com/user-attachments/assets/da2f8c6a-c017-4267-a5af-97e78c8c039a">
 
-In the project directory, you can run:
+## Purpose
 
-### `npm start`
+The joke management system was a challenge given to me in my very first technical interview, it was a live coding session. Time limit was 40 minutes and I think I completed 20% of the solution. It was done in JavaScript using the create-react-app library. The day after the interview I completed the solution, I believe it took me 12 hours to finish including CSS.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img width="803" alt="joke mg" src="https://github.com/user-attachments/assets/cabfec67-de92-4a6e-85e9-a21ae00a90d8">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Learnings
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A lot of the challenge was new to me, for example having a next and previous button to scroll through elements in array that were displayed to the user, was something I had not done before. Having a button that toggled between a favourite list and a list that displayed all jokes was also new. 
 
-### `npm run build`
+This challenge really helped me to understand how important DRY coding is. My first iteration was like an ocean and there was a lot to be improved upon. It took me sometime to work out how to make the code drier. It boiled down to keeping track of the currentIndex of the joke I was displaying/ editing/ deleting. And also using an ojbect with two properties both arrays, rather then using two separate pieces of state i.e arrayJokes, arrayFavourites, to store the jokes. Keeping track of the currentIndex meant I could pass the currentIndex into different functions such as the next button or the edit function or delete function etc. I toggled booleans to show a favoruites list or a view all list.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In terms of CSS
+I got my head around the properties position: absolute;, position: relative; and the z-index to display the edit joke form to the user in the center of the screen in front of the rest of the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I also disabled buttons, for example a small icon appears and the previous button is unclickable when you viewing the first joke. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Next iteration
+Improvements to the edit from layout.
+You can still toggle the 'View all jokes'/'View favourite jokes' button even if there are no favourites. 
+It would be nice to be able to press the 'next' button when you are viewing the last joke in order to fetch a new joke from the API.
